@@ -1,0 +1,139 @@
+body {
+    background: url(../cssMemeSlider/assets/cats.jpg)
+}
+#cssMemeSlider {
+    margin: 0 auto;
+    width: 900px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #cssMemeSlider input[type=radio] {
+    display: none;
+ }
+ #cssMemeSlider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid #D8BFD8;
+    border-radius: 10px;
+    background: #B4CAD7;
+    z-index: 1;
+ }
+ #container {
+    width: 100%;
+    overflow: hidden;
+ }
+ #firstSlide:checked ~ #slides .meme-box {
+    margin-left: 0;
+ }
+ #secondSlide:checked ~ #slides .meme-box {
+    margin-left: -100%;
+ }
+ #thirdSlide:checked ~ #slides .meme-box {
+    margin-left: -200%;
+ }
+ #fourthSlide:checked ~ #slides .meme-box {
+    margin-left: -300%;
+ }
+ #slides .meme-box {
+    transition: margin-left 800ms ease-in-out;
+    width: 400%;
+    line-height: 0;
+    height: 500px;
+ }
+ #slides .meme {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #000;
+ }
+#bottomBox {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#text-slides {
+    width: 75%;
+    position: relative;
+    z-index: 1;
+}
+.text-meme-box {
+    display: flex;
+    flex-direction: row;
+    transition: margin-left 500ms ease-in;
+    width: 400%;
+    line-height: 0;
+}
+#bottomBox .text-meme {
+    width: 25%;
+    height: 100%;
+    color: #000;
+    text-align: left;
+    background: #B4CAD7;
+    border: 3px solid #D8BFD8;
+    border-radius: 10px;
+ }
+ #firstSlide:checked ~ #bottomBox .text-meme-box {
+    margin-left: 0;
+ }
+ #secondSlide:checked ~ #bottomBox .text-meme-box {
+    margin-left: -100%;
+ }
+ #thirdSlide:checked ~ #bottomBox .text-meme-box {
+    margin-left: -200%;
+ }
+ #fourthSlide:checked ~ #bottomBox .text-meme-box {
+    margin-left: -300%;
+ }
+ #controllers {
+    text-align: center;
+    width: 25%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+ }
+ #controllers label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius:100%;
+    background: #606060;
+    margin: 0 10px;
+ }
+ #firstSlide:checked ~ #bottomBox label:nth-child(1),
+ #secondSlide:checked ~ #bottomBox label:nth-child(2),
+ #thirdSlide:checked ~ #bottomBox label:nth-child(3),
+ #fourthSlide:checked ~ #bottomBox label:nth-child(4) {
+    background: #2b2b2b;
+ }
+ #firstSlide:hover ~ #bottomBox label:nth-child(1),
+ #secondSlide:hover ~ #bottomBox label:nth-child(2),
+ #thirdSlide:hover ~ #bottomBox label:nth-child(3),
+ #fourthSlide:hover ~ #bottomBox label:nth-child(4) {
+    background: #FFE4E1;
+ }
+.meme img {
+   width: 90%;
+   height: 100%;
+}
+ @media (max-width: 768px){
+    #bottomBox {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        align-items: center;
+    }
+    #bottomBox .text-meme {
+        text-align: center;
+    }
+    #controllers {
+        justify-content:center;
+    }
+ }
