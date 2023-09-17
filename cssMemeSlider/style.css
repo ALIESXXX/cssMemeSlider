@@ -3,7 +3,7 @@ body {
 }
 #cssMemeSlider {
     margin: 0 auto;
-    width: 800px;
+    width: 900px;
     max-width: 100%;
     text-align: center;
  }
@@ -41,7 +41,7 @@ body {
     transition: margin-left 800ms ease-in-out;
     width: 400%;
     line-height: 0;
-    height: 400px;
+    height: 500px;
  }
  #slides .meme {
     width: 25%;
@@ -120,7 +120,7 @@ body {
     background: #FFE4E1;
  }
 .meme img {
-   width: 80%;
+   width: 90%;
    height: 100%;
 }
  @media (max-width: 768px){
