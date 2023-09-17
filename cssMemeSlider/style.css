@@ -1,5 +1,5 @@
 body {
-    background: #BC8F8F;
+    background: url(../cssMemeSlider/assets/cats.jpg)
 }
 #cssMemeSlider {
     margin: 0 auto;
@@ -18,7 +18,7 @@ body {
     padding: 10px;
     border: 3px solid #D8BFD8;
     border-radius: 10px;
-    background: #fff;
+    background: #B4CAD7;
     z-index: 1;
  }
  #container {
@@ -41,7 +41,7 @@ body {
     transition: margin-left 800ms ease-in-out;
     width: 400%;
     line-height: 0;
-    height: 300px;
+    height: 400px;
  }
  #slides .meme {
     width: 25%;
@@ -64,7 +64,6 @@ body {
     position: relative;
     z-index: 1;
 }
-
 .text-meme-box {
     display: flex;
     flex-direction: row;
@@ -77,7 +76,9 @@ body {
     height: 100%;
     color: #000;
     text-align: left;
-    background: #BC8F8F;
+    background: #B4CAD7;
+    border: 3px solid #D8BFD8;
+    border-radius: 10px;
  }
  #firstSlide:checked ~ #bottomBox .text-meme-box {
     margin-left: 0;
@@ -100,17 +101,17 @@ body {
  }
  #controllers label {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius:100%;
-    background: #ccc;
+    background: #606060;
     margin: 0 10px;
  }
  #firstSlide:checked ~ #bottomBox label:nth-child(1),
  #secondSlide:checked ~ #bottomBox label:nth-child(2),
  #thirdSlide:checked ~ #bottomBox label:nth-child(3),
  #fourthSlide:checked ~ #bottomBox label:nth-child(4) {
-    background: #444;
+    background: #2b2b2b;
  }
  #firstSlide:hover ~ #bottomBox label:nth-child(1),
  #secondSlide:hover ~ #bottomBox label:nth-child(2),
@@ -118,6 +119,10 @@ body {
  #fourthSlide:hover ~ #bottomBox label:nth-child(4) {
     background: #FFE4E1;
  }
+.meme img {
+   width: 80%;
+   height: 100%;
+}
  @media (max-width: 768px){
     #bottomBox {
         display: flex;
