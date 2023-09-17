@@ -19,7 +19,6 @@ body {
     border: 3px solid #D8BFD8;
     border-radius: 10px;
     background: #fff;
-    position: relative;
     z-index: 1;
  }
  #container {
@@ -118,4 +117,18 @@ body {
  #thirdSlide:hover ~ #bottomBox label:nth-child(3),
  #fourthSlide:hover ~ #bottomBox label:nth-child(4) {
     background: #FFE4E1;
+ }
+ @media (max-width: 768px){
+    #bottomBox {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        align-items: center;
+    }
+    #bottomBox .text-meme {
+        text-align: center;
+    }
+    #controllers {
+        justify-content:center;
+    }
  }
